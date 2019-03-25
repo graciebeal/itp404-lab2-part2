@@ -1,0 +1,14 @@
+<h1>Contacts</h1>
+<div id="allContacts">
+	{{#each model as |user|}}
+
+	<div class="contact">
+		{{#link-to "user" user.id}}
+			{{user.firstName}} {{user.lastName}}
+		{{/link-to}}
+	</div>
+
+	{{/each}}
+</div>
+
+{{outlet}}
